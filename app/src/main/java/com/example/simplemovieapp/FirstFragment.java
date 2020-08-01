@@ -38,7 +38,7 @@ public class FirstFragment extends Fragment {
         recyclerView = view.findViewById(R.id.movies);
 
         apiInterface = ApiClient.getClient().create(MovieApiInterface.class);
-        apiInterface.getTopRatedMovies("46aeec1ac063fd0f85be8ba021e32593", "ru")
+        apiInterface.getPopularMovies("46aeec1ac063fd0f85be8ba021e32593", "en")
                 .enqueue(new Callback<MovieResponse>() {
                              @Override
                              public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
